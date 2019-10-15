@@ -1,5 +1,7 @@
 # extract-clips
 
+[![Crates.io](https://img.shields.io/crates/v/extract-clips.svg)](https://crates.io/crates/extract-clips)
+
 Extract clips of audio and video from source files
 according to a DaVinci Resolve 16 exported EDL file,
 using ffmpeg.
