@@ -6,7 +6,7 @@ readme = "README.md"
 repository = "https://github.com/ctsrc/ffmpeg-extract-clips-davinci-resolve-edl"
 version = "0.0.0"
 authors = ["Erik Nordstrøm <erik@nordstroem.no>"]
-keywords = ["ffmpeg", "davinci", "resolve", "edl", "edit", "decision", "list"]
+keywords = ["ffmpeg", "davinci", "resolve", "edl", "edit-decision-list"]
 categories = ["multimedia", "command-line-utilities"]
 edition = "2018"
 
