@@ -1,0 +1,14 @@
+[package]
+name = "extract-clips"
+description = "Extract clips of audio and video from source files according to a DaVinci Resolve 16 exported EDL file, using ffmpeg"
+license = "ISC"
+readme = "README.md"
+repository = "https://github.com/ctsrc/ffmpeg-extract-clips-davinci-resolve-edl"
+version = "0.0.0"
+authors = ["Erik Nordstrøm <erik@nordstroem.no>"]
+keywords = ["ffmpeg", "davinci", "resolve", "edl", "edit", "decision", "list"]
+categories = ["multimedia", "command-line-utilities"]
+edition = "2018"
+
+[dependencies]
+clap = { version = "2.33.0", features = ["yaml"] }
