@@ -8,7 +8,7 @@ version = "0.0.0"
 authors = ["Erik Nordstrøm <erik@nordstroem.no>"]
 keywords = ["ffmpeg", "davinci-resolve", "edl", "edit-decision-list"]
 categories = ["multimedia", "command-line-utilities"]
-edition = "2018"
+edition = "2021"
 
 [dependencies]
 clap = { version = "2.33.0", features = ["yaml"] }
