@@ -24,7 +24,7 @@ fn main() -> std::io::Result<()> {
     let args = App::from_yaml(yaml).version(crate_version!()).get_matches();
 
     let input_edl_fname = args.value_of("file.edl").unwrap();
-    let input_edl_file = File::open(input_edl_fname)?;
+    let _input_edl_file = File::open(input_edl_fname)?;
 
     Ok(())
 }
