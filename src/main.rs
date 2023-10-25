@@ -14,18 +14,17 @@
  * OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
  */
 
-use std::fs::File;
-use clap::load_yaml;
 use clap::crate_version;
+use clap::load_yaml;
 use clap::App;
+use std::fs::File;
 
-fn main () -> std::io::Result<()>
-{
-  let yaml = load_yaml!("cli.yaml");
-  let args = App::from_yaml(yaml).version(crate_version!()).get_matches();
+fn main() -> std::io::Result<()> {
+    let yaml = load_yaml!("cli.yaml");
+    let args = App::from_yaml(yaml).version(crate_version!()).get_matches();
 
-  let input_edl_fname = args.value_of("file.edl").unwrap();
-  let input_edl_file = File::open(input_edl_fname)?;
+    let input_edl_fname = args.value_of("file.edl").unwrap();
+    let input_edl_file = File::open(input_edl_fname)?;
 
-  Ok(())
+    Ok(())
 }
