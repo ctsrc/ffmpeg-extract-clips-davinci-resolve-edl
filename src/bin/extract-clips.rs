@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2019 Erik Nordstrøm <erik@nordstroem.no>
+ * Copyright (c) 2019, 2023 Erik Nordstrøm <erik@nordstroem.no>
  *
  * Permission to use, copy, modify, and/or distribute this software for any
  * purpose with or without fee is hereby granted, provided that the above
@@ -14,17 +14,28 @@
  * OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
  */
 
-use clap::crate_version;
-use clap::load_yaml;
-use clap::App;
+//! Use ffmpeg to extract clips of audio and video from source files
+//! according to a DaVinci Resolve 16 exported EDL file.
+
+use clap::Parser;
 use std::fs::File;
+use std::path::PathBuf;
+
+#[derive(Debug, Parser)]
+struct Args {
+    /// EDL file
+    edl_file: PathBuf,
+}
 
 fn main() -> std::io::Result<()> {
-    let yaml = load_yaml!("cli.yaml");
-    let args = App::from_yaml(yaml).version(crate_version!()).get_matches();
+    // install global collector configured based on RUST_LOG env var.
+    tracing_subscriber::fmt::init();
 
-    let input_edl_fname = args.value_of("file.edl").unwrap();
-    let _input_edl_file = File::open(input_edl_fname)?;
+    // cli args
+    let args = Args::parse();
+
+    let input_edl_fpath = args.edl_file;
+    let _input_edl_file = File::open(input_edl_fpath)?;
 
     Ok(())
 }

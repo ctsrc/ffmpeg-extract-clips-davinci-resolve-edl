@@ -11,4 +11,6 @@ categories = ["multimedia", "command-line-utilities"]
 edition = "2021"
 
 [dependencies]
-clap = { version = "2", features = ["yaml"] }
+clap = { version = "4", features = ["cargo", "derive"] }
+tracing = "0.1"
+tracing-subscriber = "0.3"

@@ -1,6 +1,0 @@
-name: extract-clips
-about: Extract clips of audio and video from source files according to a DaVinci Resolve 16 exported EDL file, using ffmpeg
-args:
-        - file.edl:
-                  help: EDL file
-                  required: true
