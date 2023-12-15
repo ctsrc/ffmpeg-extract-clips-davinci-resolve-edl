@@ -11,4 +11,4 @@ categories = ["multimedia", "command-line-utilities"]
 edition = "2021"
 
 [dependencies]
-clap = { version = "2.33.0", features = ["yaml"] }
+clap = { version = "2", features = ["yaml"] }
